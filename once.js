@@ -1,8 +1,10 @@
 const { Telegraf } = require('telegraf');
 
+require('dotenv').config();
+
 const self = {
-    BOT_TOKEN: '7186897700:AAG3Rf4Kbv-bBf_sgKwlBOOYbaLG_mnh9R4',
-    SECRET_PATH: 'abc',
+    BOT_TOKEN: process.env.BOT_TOKEN,
+    SECRET_PATH: process.env.SECRET_PATH,
 }
 
 const bot = new Telegraf(self.BOT_TOKEN);
